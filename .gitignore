@@ -1,7 +1,7 @@
-# Ignore the build directory
+
 build/
 
-# Ignore compiled binaries and libraries
+
 *.exe
 *.exe~
 *.dll
@@ -10,8 +10,8 @@ build/
 *.o
 *.obj
 
-# Ignore Cargo build directory
+
 target/
 
-# Ignore other Rust specific files
+
 **/*.rs.bk
