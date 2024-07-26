@@ -37,15 +37,11 @@ impl Polygon for FrameBuffer {
                     xf = vec[0][0] as isize;
                     yf = vec[0][1] as isize;
                 }
-
                 
                 if (y0 <= casted_y   &&  casted_y < yf ) || (yf <= casted_y && casted_y < y0) {
 	                let x = x0 + (casted_y - y0) * (xf - x0) / (yf - y0);
 	                intersections.push(x as usize);
-	            }
-
-
-                
+	            }      
             }
 
             if intersections.len() > 1 {
