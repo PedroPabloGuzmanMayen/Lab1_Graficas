@@ -23,6 +23,10 @@ fn main() {
   framebuffer.fill_polygon(&vec);
   let vec2:Vec<[usize; 2]> = vec![[321, 335], [288, 286], [339, 251], [374, 302]];
   let vec3:Vec<[usize; 2]> = vec![[377, 249], [411, 197], [436, 249]];
+  let vec4: Vec<[usize; 2]> = vec![[413, 177], [448, 159], [502, 88], [553, 53], [535, 36], [676, 37], [660, 52], [750, 145], [761, 179], [672, 192], [659, 214], [615, 214], [632, 230], [580, 230], [597, 215], [552, 214], [517, 144], [466, 180]
+  ];
+  let vec5: Vec<[usize;2]> = vec![[682, 175], [708, 120], [735, 148], [739, 170]
+  ];
   framebuffer.polygon(&vec);
   framebuffer.set_current_color(Color::new(255,255,0));
   framebuffer.fill_polygon(&vec);
@@ -34,6 +38,11 @@ fn main() {
   framebuffer.polygon(&vec3);
   framebuffer.set_current_color(Color::new(255,0,0));
   framebuffer.fill_polygon(&vec3);
+  framebuffer.set_current_color(Color::new(0,0,0));
+  framebuffer.polygon(&vec4);
+  framebuffer.polygon(&vec5);
+  framebuffer.set_current_color(Color::new(0,255,0));
+  framebuffer.fill_polygon(&vec4);
   framebuffer.write_to_bmp("polygonfill.bmp");
 
 }
