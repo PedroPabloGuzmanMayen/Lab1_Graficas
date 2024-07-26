@@ -22,7 +22,7 @@ fn main() {
   framebuffer.set_current_color(Color::new(255,255,0));
   framebuffer.fill_polygon(&vec);
   let vec2:Vec<[usize; 2]> = vec![[321, 335], [288, 286], [339, 251], [374, 302]];
-  let vec3:Vec<[usize; 2]> = vec![[377, 249], [411, 197], [436, 249]]; 
+  let vec3:Vec<[usize; 2]> = vec![[377, 249], [411, 197], [436, 249]];
   framebuffer.polygon(&vec);
   framebuffer.set_current_color(Color::new(255,255,0));
   framebuffer.fill_polygon(&vec);
