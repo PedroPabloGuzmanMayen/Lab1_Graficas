@@ -10,9 +10,11 @@ use crate::polygon::{Polygon, get_max_limits};
 
 fn main() {
 
-  let width = 100;
-  let height = 100;
+  let width = 1000;
+  let height = 1000;
   let mut framebuffer = FrameBuffer::new(width, height);
+  framebuffer.set_background_color(Color::new(0,0,0));
+  framebuffer.clear();
   framebuffer.set_current_color(Color::new(0,255,0));
   framebuffer.point(50,50);
   framebuffer.write_to_bmp("polygonfill.bmp");
