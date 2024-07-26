@@ -33,7 +33,7 @@ impl FrameBuffer {
         self.background_color = color;
     }
 
-    pub fn get_Color(&mut self, x:usize, y:usize) -> Color {
+    pub fn get_color(&mut self, x:usize, y:usize) -> Color {
         self.buffer[self.width * y + x]
     }
 

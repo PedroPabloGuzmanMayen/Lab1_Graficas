@@ -88,7 +88,7 @@ fn write_pixel_data(
     let padding_size = (4 - (row_size % 4)) % 4;
 
     for y in (0..height).rev() {
-        let row_start = y * width;
+        let row_start = (height-y-1) * width;
         let row_end = row_start + width;
 
         for &pixel in &buffer[row_start..row_end] {

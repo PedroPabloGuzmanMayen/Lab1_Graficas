@@ -1,3 +1,4 @@
+
 use crate::framebuffer::FrameBuffer;
 
 pub trait Line {
