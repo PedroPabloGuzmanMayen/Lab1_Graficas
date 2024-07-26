@@ -2,12 +2,12 @@ use crate::line::Line;
 use crate::framebuffer::FrameBuffer;  
 
 pub trait Polygon {
-    fn polygon(&mut self, vec: Vec<[usize; 2]>);
-    fn fill_polygon(&mut self, vec:Vec<[usize;2]>);
+    fn polygon(&mut self, vec: &Vec<[usize; 2]>);
+    fn fill_polygon(&mut self, vec:&Vec<[usize;2]>);
 }
 
 impl Polygon for FrameBuffer {
-    fn polygon(&mut self, vec: Vec<[usize; 2]>) {
+    fn polygon(&mut self, vec: &Vec<[usize; 2]>) {
         // Draw the polygon edges
         for i in 0..vec.len() {
             let (x1, y1) = (vec[i][0], vec[i][1]);
@@ -16,7 +16,7 @@ impl Polygon for FrameBuffer {
         }
     }
 
-    fn fill_polygon(&mut self, vec: Vec<[usize; 2]>) {
+    fn fill_polygon(&mut self, vec: &Vec<[usize; 2]>) {
         let (max_x, min_x, max_y, min_y) = get_max_limits(&vec);
         let mut intersections:Vec<usize> = Vec::new();
         let mut x0:isize = 0;
